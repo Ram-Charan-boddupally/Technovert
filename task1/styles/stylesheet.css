@@ -52,3 +52,7 @@ nav a{
     margin-bottom: 20px;
     list-style: outside '-> ';
 }
+
+.describtion{
+    width: 75%;
+}
