@@ -50,7 +50,7 @@ nav a{
 
 .points li{
     margin-bottom: 20px;
-    list-style: outside '-> ';
+    list-style: outside '- ';
 }
 
 .describtion{
