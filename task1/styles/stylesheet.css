@@ -1,0 +1,54 @@
+*{
+    box-sizing:border-box;
+}
+
+a:link {
+    text-decoration: none;
+    color:white;
+}
+a:hover {
+    font-weight: bolder;
+}
+html,body{
+    margin:0px;
+    padding:0px;
+}
+
+/* Header */
+
+header h1 {
+    background-color: DodgerBlue;
+    color: whitesmoke;
+    height: 100px;
+    margin:0px;
+    padding:20px;
+    font-size: 300%;
+}
+
+nav {
+    background-color:black;
+    height: 40px;
+    padding:10px;
+}
+nav a{
+    margin-left: 25px;
+}
+
+/* content body */
+
+#content {
+    margin:30px 40px;
+    padding: 0px;
+}
+
+.keypoints {
+    border: 2px groove black;
+    width: max-content;
+    display: block;
+    padding: 0px 25px;
+}
+
+.points li{
+    margin-bottom: 20px;
+    list-style: outside '-> ';
+}
