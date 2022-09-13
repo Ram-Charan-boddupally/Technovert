@@ -48,9 +48,6 @@ html,body {
 .navigation a{
     margin-left: 25px;
 }
-.navigation a:first-child{
-    font-weight: bolder;
-}
 
 #blogIcon {
     margin-left: 25px;
@@ -71,13 +68,14 @@ html,body {
     border: 1px solid #d3d3d3;
     width: max-content;
     display: block;
-    font-family: "century Gothic";
+/*     font-family: "century Gothic"; */
     padding: 0px 10px;
 }
 
 .news{
     margin: 8px 0px;
 }
+
 .points{
     padding-left:20px;
     padding-right: 15px;
@@ -90,8 +88,6 @@ html,body {
 
 /* adjusting width of the content */
 .description{
-    font-family: ui-rounded;
     width: 1001px;
-    font-size: 14.25px;
-    font-weight: 500;
+    font-size: 16px;
 }
