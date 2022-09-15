@@ -9,100 +9,106 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- adding custom styleshhet -->
     <link rel="stylesheet" href="../task2/styles/stylesheet.css">
+    <link rel="stylesheet" href="../task2/styles/home_page_stylesheet.css">
+
     <title>Document</title>
 </head>
 <body>
-    <div class="container-fluid bg-image container_primary">
-        <div class="container position-relative container_secondary">
-            <header class="w-100">
-                <nav id="navigationPrimary" >
-                    <ul class="nav justify-content-end">
-                        <li class="nav-item"><a class="nav-link text-white" href="#">Request a Quote <span>&nbsp;|</span> </a></li>
-                        <li class="nav-item"><a class="nav-link text-white" href="#">Client login <span>&nbsp;|</span></a></li>
-                        <li class="nav-item"><a class="nav-link text-white" href="#">Vechile Export Portal</a></li>
-                    </ul>
-                </nav>
+    <!-- background image using fluid container -->
+    <div class="container position-relative container_primary">
+        <header class="w-100">
+            <!-- dividing the naviagtion into 2 blocks -->
+            <nav id="navigationPrimary" >
+                <ul class="nav justify-content-end">
+                    <li class="nav-item"><a class="nav-link" href="#">Request a Quote <span>&nbsp;|</span> </a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Client login <span>&nbsp;|</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Vechile Export Portal</a></li>
+                </ul>
+            </nav>
 
-                <nav id="navigationSecondary">
-                    <img id="navigationSecondaryLogo" src="../task2/images/logo.png" alt="logo">
-                    <ul class="nav justify-content-end">
-                        <li class="nav-item"><a class="nav-link " href="#">HOME <span class="text-white">&nbsp;|</span> </a></li>
-                        <li class="nav-item"><a class="nav-link " href="#">ABOUT FTZWS <span class="text-white">&nbsp;|</span> </a></li>
-                        <li class="nav-item"><a class="nav-link " href="#">OUR SERVICES <span class="text-white">&nbsp;|</span> </a></li>
-                        <li class="nav-item"><a class="nav-link " href="#">OUR CLIENTS <span class="text-white">&nbsp;|</span> </a></li>
-                        <li class="nav-item"><a class="nav-link " href="#">CONTACT US</a></li>
-                    </ul>
-                </nav>
-            </header>
-
-            <div class="container mb-3">
-                <div class="row">
-                    <div class="col-sm-1 h1 p-4 pb-5 w-100 brand_info">
-                        BRINGING TECHNOLOGY <br>
-                        AND OPERATIONAL EXCELLENCE.
-                    </div>
+            <!-- secondary navigation is the main naivgation it ahs Home and other navigation links -->
+            <nav id="navigationSecondary">
+                <img id="navigationSecondaryLogo" src="../task2/images/logo.png" alt="logo">
+                <ul class="nav justify-content-end">
+                    <li class="nav-item"><a class="nav-link" href="#">HOME <span class="text-white">&nbsp;|</span> </a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">ABOUT FTZWS <span class="text-white">&nbsp;|</span> </a></li>
+                    <li class="nav-item"><a class="nav-link" href="../task2/service.html">OUR SERVICES <span class="text-white">&nbsp;|</span> </a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">OUR CLIENTS <span class="text-white">&nbsp;|</span> </a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">CONTACT US</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <div class="container mb-3">
+            <div class="row">
+                <div class="col-sm-1 h1 p-4 pb-5 ps-5 w-100 brand_info">
+                    BRINGING TECHNOLOGY <br>
+                    AND OPERATIONAL EXCELLENCE.
                 </div>
-
-                <div class="row service_list">
-                    <div class="col-sm-4">
-                        <section class="service">
-                            <img class="service_logo" src="../task2/images/tile1.png" alt="service">
-                            <article class="service_text">
-                                <p>Imagine an international gateway where goods and merchandise flow across borders. Where countries lower taxes,
-                                reduce red tape, and eliminate road blocks. Where companies import goods and merchandise directly into a Free 
-                                Trade Zone - and then ship products out duty free.</p>
-
-                                <p>The Miami Free Trade Zone connects North America, Europe and Asia to Latin America and the Caribbean via direct 
-                                air and sea transportation links, plus rail and expressway. Operated by FTZ World Services, the 47-acre Zone 
-                                (#372) saves companies money and time.</p>
-                               
-                                <a href="#">More about Free Trade Zones ></a>
-                            </article>
-                        </section>
+                <div class="primary_block">
+                    <div class="row m-0 secondary_block">
+                        <div class="col-sm-4">
+                            <section class="service">
+                                <img class="service_logo" src="../task2/images/tile1.png" alt="service">
+                                <article class="service_text">
+                                    <p>Imagine an international gateway where goods and merchandise flow across borders. Where countries lower taxes,
+                                    reduce red tape, and eliminate road blocks. Where companies import goods and merchandise directly into a Free 
+                                    Trade Zone - and then ship products out duty free.</p>
+            
+                                    <p>The Miami Free Trade Zone connects North America, Europe and Asia to Latin America and the Caribbean via direct 
+                                    air and sea transportation links, plus rail and expressway. Operated by FTZ World Services, the 47-acre Zone 
+                                    (#372) saves companies money and time.</p>
+                                    
+                                    <a href="#">More about Free Trade Zones ></a>
+                                </article>
+                            </section>
+                        </div>
+                        
+                        <div class="col-sm-4">
+                            <section class="service">
+                                <img class="service_logo" src="../task2/images/tile2.png" alt="service">
+                                <article class="service_text"> 
+                                    <p>FTZ World Services is your ticket to the world. We're the licensed operator of the Miami Free Trade Zone,
+                                    the "Gateway to the Americas." We process as much as $1 billion in goods from more than 70 countries each year.</p>
+                                    
+                                    <p>A leader in free trade zone operations, FTZ works magic behind the scenes, offering logistical and operational 
+                                    excellence. FTZ's many services include technology, public warehousing, yard storage and on-site U.S. Customs. Other
+                                    U.S. free trade zones also benefit from our technological support and operational consulting.</p>                               
+                                    <a href="#">Request a Quote></a>
+                                </article>
+                            </section>
+                        </div>
+            
+                        <div class="col-sm-4">
+                            <section class="service">
+                                <img class="service_logo" src="../task2/images/tile3.png" alt="service">
+                                <article class="service_text">
+                                    <p>FTZ World Service has the unique advantage of being the licensed operator of the Miami Free Trade Zone. 
+                                    We offer state-of-the-art facilities and a stellar track record in zone management, plus technological support, 
+                                    warehousing, and storage. Because FTZ understands U.S. Customs rules, we can use our software and logistical 
+                                    expertise to speed up your paperwork, remove road blocks, and get products to market cheaper and faster. We 
+                                    save companies across multiple industries thousands of dollars per month in fees. We'll give you less to manage
+                                    and more dollars to keep in your pocket.
+                                    </p>                               
+                                    <a href="#">More about what we offer ></a>
+                                </article>
+                            </section>
+                        </div>        
                     </div>
-
-                    <div class="col-sm-4">
-                        <section class="service">
-                            <img class="service_logo" src="../task2/images/tile2.png" alt="service">
-                            <article class="service_text"> 
-                                <p>FTZ World Services is your ticket to the world. We're the licensed operator of the Miami Free Trade Zone,
-                                the "Gateway to the Americas." We process as much as $1 billion in goods from more than 70 countries each year.</p>
-                                
-                                <p>A leader in free trade zone operations, FTZ works magic behind the scenes, offering logistical and operational 
-                                excellence. FTZ's many services include technology, public warehousing, yard storage and on-site U.S. Customs. Other
-                                U.S. free trade zones also benefit from our technological support and operational consulting.</p>                               
-                                <a href="#">Request a Quote></a>
-                            </article>
-                        </section>
-                    </div>
-
-                    <div class="col-sm-4">
-                        <section class="service">
-                            <img class="service_logo" src="../task2/images/tile3.png" alt="service">
-                            <article class="service_text">
-                                <p>FTZ World Service has the unique advantage of being the licensed operator of the Miami Free Trade Zone. 
-                                We offer state-of-the-art facilities and a stellar track record in zone management, plus technological support, 
-                                warehousing, and storage. Because FTZ understands U.S. Customs rules, we can use our software and logistical 
-                                expertise to speed up your paperwork, remove road blocks, and get products to market cheaper and faster. We 
-                                save companies across multiple industries thousands of dollars per month in fees. We'll give you less to manage
-                                and more dollars to keep in your pocket.
-                                </p>                               
-                                <a href="#">More about what we offer ></a>
-                            </article>
-                        </section>
-                    </div>
-
                 </div>
             </div>
+            
+        </div>
 
-            <footer class="footer text-center w-100">
-                <p>Copyright &#169; 2010 FTZ World Services. All rights reserved.
-                    &nbsp;<a href="#">Contact Us</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">Request a Quote.</a>
-                </p>
-            </footer>
- 
-        </div> 
-    </div>
+        <footer class="footer text-center w-100 p-2">
+            <span>Copyright &#169; 2010 FTZ World Services. All rights reserved.
+                &nbsp;
+                <a href="#" class="text-white">Contact Us</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                <a href="#" class="text-white">Request a Quote.</a>
+            </span>
+        </footer>
+
+    </div> 
     <!-- 
         changes to be made
         1.add margin to div dont use bottom in footer

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- meta data -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- adding bootstrap css files-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- adding custom styleshhet -->
+    <link rel="stylesheet" href="../task2/styles/stylesheet.css">
+    <link rel="stylesheet" href="../task2/styles/service_page_stylesheet.css">
+    <title>Service Page</title>
+</head>
+<body>
+    <!-- background image using fluid container -->
+    <div class="container position-relative container_primary">
+        <header class="w-100">
+            <!-- dividing the naviagtion into 2 blocks -->
+            <nav id="navigationPrimary" >
+                <ul class="nav justify-content-end">
+                    <li class="nav-item"><a class="nav-link" href="#">Request a Quote <span>&nbsp;|</span> </a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Client login <span>&nbsp;|</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Vechile Export Portal</a></li>
+                </ul>
+            </nav>
+
+            <!-- secondary navigation is the main naivgation it ahs Home and other navigation links -->
+            <nav id="navigationSecondary">
+                <img id="navigationSecondaryLogo" src="../task2/images/logo.png" alt="logo">
+                <ul class="nav justify-content-end">
+                    <li class="nav-item"><a class="nav-link" href="../task2/index.html">HOME <span class="text-white">&nbsp;|</span> </a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">ABOUT FTZWS <span class="text-white">&nbsp;|</span> </a></li>
+                    <li class="nav-item "><a class="nav-link active text-white" href="#">OUR SERVICES <span class="text-white">&nbsp;|</span> </a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">OUR CLIENTS <span class="text-white">&nbsp;|</span> </a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">CONTACT US</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="container primary_block">
+            <div class="row p-3 m-0 secondary_block">
+                <div class="col-md-4 h-100">
+                    <div class="case_studies">
+                        <img src="../task2/images/casestudies_industries-column1.jpg" alt="case-study-1">
+                        <img src="../task2/images/casestudies_industries-column2.jpg" alt="case-study-2">
+                    </div>
+
+                    <ul class="service_links list-unstyled">
+                        <li><a href="#">Technology Services</a></li>
+                        <li><a href="#">Public Warehosuing</a></li>
+                        <li><a href="#">Yard Strong</a></li>
+                    </ul>
+
+                </div>
+                <div class="col-md-8 h-100 content">
+                    <h4 id="serviceTitle">OUR SERVICES</h4>
+                    <div class="information">
+                        <p> Our highly trained and experienced staff can handle even the most complex distribution needs. 
+                        We've designed a package of benefits that work together to streamline your experience in the Miami 
+                        Free Trade Zone. Tell us what you need and we'll provide it. Our primary services are <a href=""#>Technology Services</a>, 
+                        <a href="#">Public Warehousing</a> and <a href="#">Yard Storage.</a></p>
+                        
+                        <p>The Zone's un-paralleled infrastructure includes power, communication systems, fiber optics, security, and
+                        easy access to land, rail, sea, and air transportation. Our clients can tap into more than 850,000 square feet
+                        of mixed-use office, showroom and warehouse facilities in the Zone, including:
+                        </p>
+
+                        <ul class="w-100">
+                            <li> Two public warehouses with 33,000 feet each. </li>
+                            <li> Exhibition space in two showroom malls, each containing approximately 75,000 square feet. A commercial building 
+                            adjacent to the warehouses with offices and other spaces. </li>
+                            <li> The offices of U.S. Customs & Border Patrol, along with several other federal agencies integral to trade facilitation 
+                            and compliance.
+                            </li>
+                        </ul>
+
+                        <div class="botton_class">
+                            <p class="h6">Want to see how FTZ World Services can help you?</p>
+                            <button class="button" click="#"> Request Someone to Contact You 
+                                <span class='arrow-right' style="font-size:20px; font-weight:bold;">></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer text-center w-100 mt-3 p-2">
+            <span>Copyright &#169; 2010 FTZ World Services. All rights reserved.
+                &nbsp;<a class="text-white" href="#">Contact Us</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                <a class="text-white" href="#">Request a Quote.</a>
+            </span>
+        </footer>
+
+    </div>
+    <!-- adding bootstrap script tags to the html -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</body>
+</html>
