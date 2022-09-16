@@ -1,0 +1,82 @@
+/* all the tags in the page follow border box */
+*{
+    box-sizing: border-box;
+}
+
+a{
+    color: rgb(143,188,216);
+}
+
+a:hover{
+    color: rgb(146, 204, 240);
+}
+/* adding background image to the body and making it fixed even when scorling */
+body{
+    background-image: url('../images/bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color:white;
+    height: fit-content;
+    margin-bottom:5px;
+    font-family: 'Helvetica';
+}
+
+.container-primary{
+    width: 70%;
+}
+
+#navigationPrimary ul a{
+    background-color: rgba(0,0,0,0.4);
+    font-size: 60%;
+    padding: 5px;
+    margin-bottom: 30px;
+    color: white;
+}
+
+#navigationSecondary{
+    background-color: rgba(0,0,0,0.7);
+    font-size: 100%;
+    padding:10px;
+    padding-right: 50px;
+    outline: 0.5px solid rgb(63,80,100);
+    outline-offset: -5px;
+}
+
+
+#navigationSecondaryLogo{
+    position: absolute;
+    float:left;
+    top: 10px;
+    margin-left: 10px;
+}
+
+#navigationSecondary a{
+    padding-right:0px;
+    color: rgb(143,188,216);
+}
+
+/* adding hover effect ot the nav elements */
+#navigationSecondary a:hover {
+    color: rgb(146, 204, 240);
+}
+
+/* main block */
+
+.primary-block{
+    background-color: rgba(0,0,0,0.7);
+    height: max-content;
+    padding: 4px;
+}
+.secondary-block{
+    border: 1px solid rgb(63,80,100);
+    border-top: none;
+    padding: 15px 20px;
+}
+
+
+/* footer */
+.footer{
+    background-color: rgba(0,0,0,0.5); 
+    color:rgb(204,211,238);   
+}

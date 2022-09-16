@@ -1,0 +1,57 @@
+.active {
+    background-color: rgba(73,105,129,0.8);
+    border-radius: 4px;
+    margin-top:5px;
+    padding: 2px 10px;
+    /* padding-top:5px; */ 
+    color: white;
+}
+/* frame 1 of the page */
+.primary-block{
+    margin-top:50px;
+}
+
+.case-studies img{
+    width:100%;
+    margin-top:15px;
+}
+.service-links{
+    width:100%;
+    padding: 15px 0px;
+    margin-top:20px;
+    border: 1px solid rgb(63,80,100);
+    color:rgb(202, 226, 253);
+    border-width: 1px 0px;
+}
+
+/* frame 2 of the page */
+.content{
+    padding: 10px 20px;
+}
+
+#serviceTitle,.information a{
+    color: rgb(193,217,240);
+}
+
+/* button in frame 2 */
+.botton-class{
+    padding: 15px 30px;
+    background-color: rgb(17, 35, 58,0.5);
+    border: 1px solid rgb(90, 106, 129);
+    border-width: 1px 0px;
+}
+
+.button{
+    border-radius: 3px;
+    background-image: linear-gradient(rgb(44, 96, 117),rgb(1, 37, 59));
+    border: 2px solid rgb(18, 105, 133);
+    color:rgb(199, 229, 255);
+    padding: 1px 10px;
+    opacity:0.8;
+}
+
+.arrow-right{
+    font-size: 20px; 
+    font-weight:bolder;
+    line-height: 100%;
+}

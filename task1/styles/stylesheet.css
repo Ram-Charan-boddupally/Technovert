@@ -6,53 +6,88 @@ a:link {
     text-decoration: none;
     color:white;
 }
-a:hover {
-    font-weight: bolder;
+
+a:visited{
+    text-decoration: none;
+    color:white;
 }
-html,body{
+
+html,body {
     margin:0px;
     padding:0px;
 }
 
 /* Header */
+.container {
+    margin: 0px auto;
+    font-family: Arial, sans-serif;
+    font-weight:520;
+    font-size: 0.92em;
+}
 
-header h1 {
-    background-color: DodgerBlue;
+.page_title {
+    background-color: #3298cc;
     color: whitesmoke;
+    width: 100%;
     height: 100px;
     margin:0px;
-    padding:20px;
-    font-size: 300%;
+    padding: 25px;
+    font-size: 350%;
 }
 
-nav {
-    background-color:black;
+/* styleing the navigation bar */
+.navigation {
+    background-color: #333232;
     height: 40px;
     padding:10px;
+    padding-left:0px;
+    font-weight:bolder;
 }
-nav a{
+
+/* setting margin or spacing between elements in naviagation bar */
+.navigation a{
     margin-left: 25px;
+}
+
+#blogIcon {
+    margin-left: 25px;
+    position:absolute;
+    right:40px;
+    margin-top:-4px;
 }
 
 /* content body */
 
-#content {
-    margin:30px 40px;
+#pageContent {
+    margin:30px 50px;
     padding: 0px;
 }
 
-.keypoints {
-    border: 2px groove black;
+/* styling the border and adjusting the content in box */
+.key_points {
+    border: 1px solid #d3d3d3;
     width: max-content;
     display: block;
-    padding: 0px 25px;
+/*     font-family: "century Gothic"; */
+    padding: 0px 10px;
 }
 
-.points li{
+.news{
+    margin: 8px 0px;
+}
+
+.points{
+    padding-left:20px;
+    padding-right: 15px;
+    margin: 10px 0px;
+}
+.points .point{
     margin-bottom: 20px;
-    list-style: outside '- ';
+    list-style: outside '-  ';
 }
 
-.describtion{
-    width: 75%;
+/* adjusting width of the content */
+.description{
+    width: 1001px;
+    font-size: 16px;
 }
