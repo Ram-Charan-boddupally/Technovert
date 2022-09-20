@@ -4,9 +4,11 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../styles/stylesheet.css">
-        <!-- link for CSS fonts -->
-        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Didact+Gothic" />
+        <!-- linking css file for common header css from the task1-->
+        <link rel="stylesheet" href="../../task1/styles/stylesheet.css">
+        <!-- linking style sheet for carreres page  -->
+        <link rel="stylesheet" href="../styles/carrers-stylesheet.css">
+        <link href="http://fonts.cdnfonts.com/css/century-gothic-paneuropean" rel="stylesheet">
         <title>Technovert</title>
     </head>
 
@@ -20,29 +22,52 @@
                 <nav class="navigation">
                     <a href="#">HOME</a>
                     <a href="#">SERVICES</a>
-                    <a href="#">CAREERS</a>
+                    <a  class="active" href="#">CAREERS</a>
                     <a href="#">CONTACT</a>
-                    <img id="blogIcon" src="/images/blog-icon.png" alt="blog-icon" width="25" height="25">
+                    <img id="blogIcon" src="../../task1/images/blog-icon.png" alt="blog-icon" width="25" height="25">
                 </nav>
             </header>
 
-
             <!--Content of the page -->
-            <div id="container">
-                <h2>Careers at Technovert</h2>
-                <p>We are looking for smart people love finding the code and pour their heart into it.If you are one, 
-                   We would love to talk to you, Please fill the form bellow we will get back to you.</p>
-                   <form action="" id="jobApplication">
-                        <label for="" >Name</label>
-                        <input class="data" type="text" name="name">
-                        <label for="">Email</label>
-                        <input class="data" type="email" name="email" id="">
-                        <label for="">Desired role</label>
-                        <input class="data" type="text" name="role" id="">
-                        <label for="" >Resume</label>
-                        <input class="data" type="file" name="" id="">
-                   </form>
+            <div id="applicationContainer">
+                <div class="page-details">
+                    <h2 class="page-heading">Careers at Technovert</h2>
+                    <p>We are looking for smart people love finding the code and pour their heart into it.If you are one, 
+                    We would love to talk to you, Please fill the form bellow we will get back to you.</p>
+                </div>
+                
+                <form id="jobApplication" onSubmit="checkEmptyElements(this)" method="get">
+                        <div class="data-field name-field">
+                            <label class="data-label" for="name" >Name</label>
+                            <input class="data-input" type="text" id="name" name="name">
+                            <span class="user-message"> </span>
+                        </div>
+
+                        <div class="data-field email-field">
+                            <label class="data-label" for="emailId" >Email</label>
+                            <input class="data-input" type="email" id="emailId" name="emailId">
+                            <span class="user-message"> </span>
+                        </div>
+
+                        <div class="data-field role-field">
+                            <label class="data-label" for="desiredRole" >Desired role</label>
+                            <input class="data-input" type="text" id="desiredRole" name="desiredRole">
+                            <span class="user-message"> </span>
+                        </div>
+
+                        <div class="data-field resume-field">
+                            <label class="data-label" for="resume" >Upload Resume</label>
+                            <input class="data-input" type="file" id="resume" name="resume" accept=".pdf, .docx">
+                            <label for="resume" class="submit-button">Browse..</label>
+                            <span class="user-message"> </span>
+                        </div>
+
+                        <button type="submit" value="submit" form="jobApplication" class="submit-button submition">Submit</button>
+                </form>
+                <h2 id="succesfullSubmittion">Congragualtions your Application has been recived Mr/Ms <span></span></h2>
             </div>
         </div>
+
+    <script src="../scripts/script.js"></script>
     </body>
 </html>

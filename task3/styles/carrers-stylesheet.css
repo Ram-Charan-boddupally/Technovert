@@ -1,0 +1,64 @@
+.page-heading{
+    font-family: 'Century Gothic Paneuropean', sans-serif;
+    font-weight: 500;
+    font-size: 200%;
+}
+
+/* styling the border and adjusting the content in box */
+#applicationContainer{
+    padding: 25px 60px;
+    width: 75%;
+}
+
+#jobApplication{
+    margin-top:50px;
+    padding-left: 20px;
+}
+.page-heading{
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+.data-field{
+    margin-bottom: 20px;
+}
+
+.data-label{
+    display: inline-block;
+    width: 180px;
+    font-weight: bold;
+}
+
+.data-input{
+    width:150px;
+    height: 30px;
+}
+
+#resume{
+    content-visibility: hidden;
+    height: 30px;
+    border: 1px solid gray;
+}
+
+.submit-button{
+    padding: 5px 15px;
+    margin-left:10px;
+    padding-right: 50px;
+    background-color: rgb(239,238,239);
+    border: 1px groove rgba(228,229,229);
+    font-weight: bolder;
+}
+
+.user-message{
+    margin-left:10px;
+    color: red;
+}
+
+.submition{
+    margin-left:185px;
+}
+
+#succesfullSubmittion{
+    visibility:hidden;
+    color: green;
+}
