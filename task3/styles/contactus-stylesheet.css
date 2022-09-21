@@ -1,0 +1,33 @@
+#contactContainer{
+    padding: 25px 60px;
+    width: 75%;
+}
+
+#contactForm{
+    margin-top:20px;
+    padding: 10px 30px;
+}
+
+.data-field{
+    margin-bottom:20px;
+}
+
+.data-label{
+    display: inline-block;
+    width: 250px;
+}
+
+.data-input{
+    width: 200px;
+    height: 25px;
+    border: 2px inset rgb(180,181,180);
+}
+
+.contact-option-field .data-label{
+    vertical-align: middle;
+    height: 70px;
+}
+
+.options{
+    display:inline-block;
+}
