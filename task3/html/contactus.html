@@ -9,6 +9,7 @@
         <!-- linking style sheet for carreres page  -->
         <link rel="stylesheet" href="../styles/contactus-stylesheet.css">
         <link href="http://fonts.cdnfonts.com/css/century-gothic-paneuropean" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
         <title>Technovert</title>
     </head>
 
@@ -20,10 +21,10 @@
                 <div class="page_title">TECHNOVERT</div>
                 <!--Navigation section of the page -->   
                 <nav class="navigation">
-                    <a href="#">HOME</a>
+                    <a href="../../task1/index.html">HOME</a>
                     <a href="#">SERVICES</a>
-                    <a href="#">CAREERS</a>
-                    <a class="active" href="#">CONTACT</a>
+                    <a href="../../task3/html/carrrers.html">CAREERS</a>
+                    <a class="active" href="../../task3/html/contactus.html">CONTACT</a>
                     <img id="blogIcon" src="../../task1/images/blog-icon.png" alt="blog-icon" width="25" height="25">
                 </nav>
             </header>
@@ -34,17 +35,15 @@
                     <h2 class="page-heading">Contact us at Technovert</h2>
                 </div>
                 
-                <form id="contactForm" onSubmit="checkEmptyElements(this)" method="get">
-                        <div class="data-field name-field">
+                <form id="contactForm" action="javascript:void(0);" onSubmit="validateForm(this)" method="get">
+                        <div class="data-field name-field imp-field">
                             <label class="data-label" for="name" >My Name:</label>
                             <input class="data-input" type="text" id="name" name="name">
-                            <span class="user-message"> </span>
                         </div>
 
-                        <div class="data-field email-field">
+                        <div class="data-field email-field imp-field">
                             <label class="data-label" for="emailId" >My Email Address:</label>
                             <input class="data-input" type="email" id="emailId" name="emailId">
-                            <span class="user-message"> </span>
                         </div>
 
                         <div class="data-field gender-field">
@@ -58,29 +57,27 @@
                         <div class="data-field phone-field">
                             <label class="data-label" for="telephoneNumber" >My Telephone Number:</label>
                             <input class="data-input" type="tel" id="telephoneNumber" name="telephoneNumber" pattern="[6-9][0-9]{9}" placeholder="XXXXXXXXXX">
-                            <span class="user-message"> </span>
                         </div>
 
-                        <div class="data-field organization-field">
+                        <div class="data-field organization-field imp-field">
                             <label class="data-label" for="organizationName" >My organization Name:</label>
                             <input class="data-input" type="text" id="organizationName" name="organizationName">
-                            <span class="user-message"> </span>
                         </div>
 
                         <div class="data-field city-field">
                             <label class="data-label" for="cityName" >My City:</label>
                             <input class="data-input" type="text" id="cityName" name="cityName">
-                            <span class="user-message"> </span>
                         </div>
 
                         <div class="data-field state-field">
                             <label class="data-label" for="stateName">My State or Provience:</label>
                             <select name="stateName" id="stateName">
+                                <option disabled selected>Select State or provience</option>
                                 <option value="Andhra Pradesh">Andhra Pradesh</option>
                                 <option value="Arunachal Pradesh">Arunachal Pradesh</option>
                                 <option value="Assam">Assam</option>
                                 <option value="Bihar">Bihar</option>
-                                <option value="Chhattisgarh">Chhattisgarh</option>
+                                <option value="Chhattisgarh">Chattisgarh</option>
                                 <option value="Goa">Goa</option>
                                 <option value="Gujarat">Gujarat</option>
                                 <option value="Haryana">Haryana</option>
@@ -112,7 +109,7 @@
                             <label class="data-label">Contact Me By:</label>
                             <div class="options">
                                 <div>
-                                    <input type="radio" name="conctact-option" id="byEmail" value="EMAIL" checked>
+                                    <input type="radio" name="conctact-option" id="byEmail" value="EMAIL">
                                     <label for="byEmail">Email</label>    
                                 </div>
                                 <div>
@@ -129,32 +126,31 @@
                         <div class="data-field promotion-code-field">
                             <label class="data-label" for="promotionCode" >Promotion Code:</label>
                             <input class="data-input" type="text" id="promotionCode" name="promotionCode">
-                            <span class="user-message"> </span>
                         </div>
 
                         <p>OPTIONAL INFORMATION
-                            <span>This information is optional but help us to serve you better</span>
+                            <br><i>This information is optional but help us to serve you better</i>
                         </p>
 
                         <div class="data-field website-field">
                             <label class="data-label" for="webSiteName">My Website Address:</label>
-                            <input class="data-inputt" type="text" id="webSiteName" name="webSiteName">
+                            <input class="data-input" type="text" id="webSiteName" name="webSiteName">
                         </div>
 
                         <div class="data-field org-info-field">
                             <label class="data-label" for="orgInfo">Tell us More about your organization:</label>
-                            <textarea name="orgInfo" id="orgInfo" cols="40" rows="8"></textarea>
+                            <textarea name="orgInfo" id="orgInfo" cols="50" rows="7"></textarea>
                         </div>
 
                         <div class="data-field query-field">
                             <label class="data-label" for="userQuery">What i'd like to know is:</label>
-                            <textarea name="userQuery" id="userQuery" cols="40" rows="8"></textarea>
+                            <textarea name="userQuery" id="userQuery" cols="50" rows="7"></textarea>
                         </div>
 
-                        <button type="submit" value="submit" form="jobApplication" class="submit-button submition">Send Mesage</button>
-                        <button type="reset" value="reset" class="submit-button reset">Reset</button>
+                        <button type="submit" value="submit" form="contactForm" class="submit-button submition">Send Mesage</button>
+                        <button type="reset" value="reset" class="submit-button reset" onclick="reset(this);">Clear Form</button>
                 </form>
-                <h2 id="succesfullSubmittion">Congragualtions your Application has been recived Mr/Ms <span></span></h2>
+                <h2 id="succesfullSubmittion">Your query has been recived</h2>
             </div>
         </div>
 
