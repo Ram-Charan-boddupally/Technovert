@@ -94,3 +94,7 @@ input[type="radio"]:checked{
     border: 2px outset #a29e98;
     border-width: 1px 2px 2px 1px;
 }
+
+#succesfullSubmittion,#unSuccesfullSubmittion{
+    display:  none;
+}
