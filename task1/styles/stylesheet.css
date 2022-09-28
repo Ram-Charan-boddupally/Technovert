@@ -42,7 +42,7 @@ html,body {
     background-color: rgba(51,51,51);
     height: 40px;
     height: min-content;
-    padding: 12px 2px;
+    padding: 12px 8px;
     font-weight:bolder;
 }
 
@@ -61,6 +61,7 @@ html,body {
 .navigation a{
     padding: 12px 20px;
     text-align: center;
+    margin-left: -5px;
 }
 
 #blogIcon {
