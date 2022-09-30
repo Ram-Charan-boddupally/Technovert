@@ -2,6 +2,21 @@ import * as utils from './utlis.js';
 
 // Contactus form model 
 class Contact{
+    name;
+    isNameEmpty;
+    email;
+    isEmailEmpty;
+    gender;
+    country;
+    phoneNumber;
+    orgnaization;
+    state;
+    contactMode;
+    promotionCode;
+    webAddress;
+    organizationInfo;
+    query;
+
     constructor(object){
         object = object != null ? object : {};
         this.name = object.name != null ? object.name : "";
@@ -131,7 +146,7 @@ function addEventListnersToForm(){
         elements = document.querySelectorAll(".user-err-msg");
         for(let element of elements){
             element.innerText = "";
-        }
+        }        
     })
 
 }

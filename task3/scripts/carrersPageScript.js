@@ -2,8 +2,18 @@ import * as utils from "./utlis.js";
 
 // creating a model for form objects in carrers page
 class Carrers{
+    
+    // declaration of the variables
+    name;
+    isNameEmpty;
+    email;
+    isEmailEmpty;
+    role;
+    fileStatus;
+
     constructor(object){
         object = object != null ? object : {}
+        console.log(this.name);
         this.name = object.name != null ? object.name :"";
         this.isNamEmpty = utils.checkEmpty(this.name);
 
@@ -25,9 +35,10 @@ function onSubmitForm(){
             data[pair[0]] = pair[1];
         }
 
-        var carrerObject = new Carrers(data)
+        var carrerObject = new Carrers(data);
         
-        // poping errors based on the data       
+        // poping errors based on the data
+
         if(carrerObject.isNamEmpty){
             document.querySelector(".name-field .user-err-msg").innerText = "Name field can't be empty";
         }
@@ -71,8 +82,14 @@ function addEventListenersToForm(){
         }
     });
 
-}
+    elements = document.querySelector(".resume-field input");
+    elements.addEventListener('change', function(event){
+        if(event.target.value != ""){
+            event.target.parentElement.querySelector('.user-err-msg').innerHTML = "";
+        }
+    });
 
+}
 
 document.addEventListener('load',init());
 

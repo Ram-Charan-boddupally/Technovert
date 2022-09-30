@@ -24,8 +24,15 @@ input[type="radio"]:checked{
 #telephoneNumber{
     width: 155px;
 }
+
+.phone-field{
+    display: flex;
+}
+
 span#countryCode{
-    padding: 2px;
+    box-sizing: border-box;
+    padding: 2px 8px;
+    width: 42px;
     margin-right: 5px;
     border: 2px inset rgb(180,181,180);
 }
