@@ -1,21 +1,5 @@
-#contactContainer{
-    padding: 25px 60px;
-    width: 75%;
-    font-family: 'Cabin', sans-serif;
-}
-
-#contactForm{
-    margin-top:20px;
-    padding: 10px 40px;
-}
-
-.user-msg{
-    margin-left:10px;
-    color:red;
-}
-
-.data-field{
-    margin-bottom:20px;
+.break{
+    display: block;
 }
 
 .data-label{
@@ -37,6 +21,15 @@ input[type="radio"]:checked{
     accent-color: black;
 }
 
+#telephoneNumber{
+    width: 155px;
+}
+span#countryCode{
+    padding: 2px;
+    margin-right: 5px;
+    border: 2px inset rgb(180,181,180);
+}
+
 .contact-option-field .data-label{
     vertical-align: middle;
     height: 70px;
@@ -54,13 +47,15 @@ input[type="radio"]:checked{
     border: 2px inset rgb(180,181,180);
 }
 
-/* for scroll bar in the page */
-::-webkit-scrollbar {
-    width:1.3em;
-    height:2em;
-    cursor: pointer;
+/* for the select option */
+select{
+    width: 200px;
+    height: 25px;
+    border: 2px inset rgb(180,181,180);
+    text-align: center;
 }
- 
+
+/* for scroll bar in the page */ 
  ::-webkit-scrollbar-button {
     background:no-repeat #dfdcd9;
     background-size:0.75em;
@@ -93,8 +88,4 @@ input[type="radio"]:checked{
     padding: 4px 20px;
     border: 2px outset #a29e98;
     border-width: 1px 2px 2px 1px;
-}
-
-#succesfullSubmittion,#unSuccesfullSubmittion{
-    display:  none;
 }

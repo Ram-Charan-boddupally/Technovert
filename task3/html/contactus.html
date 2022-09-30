@@ -4,11 +4,13 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- linking css file for common header css from the task1-->
-        <link rel="stylesheet" href="../../task1/styles/stylesheet.css">
-        <!-- linking style sheet for carreres page  -->
-        <link rel="stylesheet" href="../styles/contactus-stylesheet.css">
-        <link href="http://fonts.cdnfonts.com/css/century-gothic-paneuropean" rel="stylesheet">
+        
+        <!-- linking stylesheets -->
+        <link rel="stylesheet" href="../../task1/styles/stylesheet.css"> <!-- commoncss file for header and naviation bar -->
+        <link rel="stylesheet" href="../styles/common-stylesheet-formelements.css"> <!-- common stylesheet for form and error message styling -->
+        <link rel="stylesheet" href="../styles/contactus-stylesheet.css"> <!-- stylesheet for carreres page --> 
+        <!-- linking css fonts -->   
+        <link href="http://fonts.cdnfonts.com/css/century-gothic-paneuropean" rel="stylesheet">      
         <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
         <title>Technovert</title>
     </head>
@@ -30,20 +32,22 @@
             </header>
 
             <!--Content of the page -->
-            <div id="contactContainer">
+            <div id="bodyContainer">
                 <div class="page-details">
                     <h2 class="page-heading">Contact us at Technovert</h2>
                 </div>
                 
-                <form id="contactForm" class="page-form" action="javascript:void(0);" onSubmit="validateForm(this)" method="get">
+                <form id="formApplication" action="javascript:void(0);" method="get">
                         <div class="data-field name-field imp-field">
-                            <label class="data-label" for="name" >My Name:</label>
+                            <label class="data-label" for="name" >My Name:<span class="mandatory-sign">*</span></label>
                             <input class="data-input" type="text" id="name" name="name">
+                            <span class="user-err-msg"></span>
                         </div>
 
                         <div class="data-field email-field imp-field">
-                            <label class="data-label" for="emailId" >My Email Address:</label>
+                            <label class="data-label" for="emailId" >My Email Address:<span class="mandatory-sign">*</span></label>
                             <input class="data-input" type="email" id="emailId" name="emailId">
+                            <span class="user-err-msg"></span>
                         </div>
 
                         <div class="data-field gender-field">
@@ -52,18 +56,26 @@
                             <label for="male">MALE</label>
                             <input type="radio" name="gender" id="feMale" value="FeMale">
                             <label for="feMale">FEMALE</label>
+                        </div>                       
+
+                        <div class="data-field country-field">
+                            <label class="data-label" for="countryName" >Select country :</label>
+                            <select name="countryName" id="countryName">
+                                <!-- added country names using the js -->
+                            </select>
                         </div>
-                        
 
                         <div class="data-field phone-field">
                             <label class="data-label" for="telephoneNumber" >My Telephone Number:</label>
-                            <select name="cntry" id="cntryName"><!-- added country names using the js --></select>
-                            <input class="data-input" type="tel" id="telephoneNumber" name="telephoneNumber" pattern="[6-9][0-9]{9}" placeholder="XXXXXXXXXX">
+                            <span name="countryCode" id="countryCode"> +00 </span>
+                            <input class="data-input" type="tel" id="telephoneNumber" name="telephoneNumber" pattern="" placeholder="XXXXXXXXXX">
+                            <span class="user-err-msg"></span>
                         </div>
 
                         <div class="data-field organization-field name-field imp-field">
-                            <label class="data-label" for="organizationName" >My organization Name:</label>
+                            <label class="data-label" for="organizationName" >My organization Name:<span class="mandatory-sign">*</span></label>
                             <input class="data-input" type="text" id="organizationName" name="organizationName">
+                            <span class="user-err-msg"></span>
                         </div>
 
                         <div class="data-field city-field">
@@ -73,7 +85,7 @@
 
                         <div class="data-field state-field">
                             <label class="data-label" for="stateName">My State or Provience:</label>
-                            <select name="stateName" id="stateName">
+                            <select name="stateName select" id="stateName">
                                 <!-- created a JS function populateStates to add options-->
                            </select>
                         </div>
@@ -82,15 +94,15 @@
                             <label class="data-label">Contact Me By:</label>
                             <div class="options">
                                 <div>
-                                    <input type="radio" name="conctact-option" id="byEmail" value="EMAIL">
+                                    <input type="radio" name="conctactOption" id="byEmail" value="EMAIL">
                                     <label for="byEmail">Email</label>    
                                 </div>
                                 <div>
-                                    <input type="radio" name="conctact-option" id="byPhone" value="PHONE">
+                                    <input type="radio" name="conctactOption" id="byPhone" value="PHONE">
                                     <label for="byPhone">Phone</label>    
                                 </div>
                                 <div>
-                                    <input type="radio" name="conctact-option" id="byBoth" value="BOTH">
+                                    <input type="radio" name="conctactOption" id="byBoth" value="BOTH">
                                     <label for="byBoth">Both</label>    
                                 </div>
                             </div>
@@ -102,12 +114,13 @@
                         </div>
 
                         <p>OPTIONAL INFORMATION
-                            <br><i>This information is optional but help us to serve you better</i>
+                            <i class="break">This information is optional but help us to serve you better</i>
                         </p>
 
-                        <div class="data-field website-field">
-                            <label class="data-label" for="webSiteName">My Website Address:</label>
-                            <input class="data-input" type="text" id="webSiteName" name="webSiteName">
+                        <div class="data-field website-field"> 
+                            <label class="data-label" for="webSiteName">My Website Address:</label> 
+                            <input class="data-input" type="text" id="webSiteName" name="webSiteName"> 
+                            <span class="user-err-msg"></span>
                         </div>
 
                         <div class="data-field org-info-field">
@@ -120,7 +133,7 @@
                             <textarea name="userQuery" id="userQuery" cols="50" rows="7"></textarea>
                         </div>
 
-                        <button type="submit" value="submit" form="contactForm" class="submit-button submition">Send Mesage</button>
+                        <button type="submit" value="submit" form="formApplication" class="submit-button submition">Send Mesage</button>
                         <button type="reset" value="reset" class="submit-button reset">Clear Form</button>
                 </form>
                 <h2 id="succesfullSubmittion">Your query has been recived, We will contact you soon</h2>
@@ -129,6 +142,6 @@
             </div>
         </div>
 
-    <script src="../scripts/script.js"></script>
+    <script type="module" src="../scripts/contactPageScript.js"></script>
     </body>
 </html>

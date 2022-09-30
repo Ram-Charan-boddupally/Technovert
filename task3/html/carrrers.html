@@ -4,10 +4,12 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- linking css file for common header css from the task1-->
-        <link rel="stylesheet" href="../../task1/styles/stylesheet.css">
-        <!-- linking style sheet for carreres page  -->
-        <link rel="stylesheet" href="../styles/carrers-stylesheet.css">
+        
+        <!-- linking stylesheets -->
+        <link rel="stylesheet" href="../../task1/styles/stylesheet.css"> <!-- commoncss file for header and naviation bar -->
+        <link rel="stylesheet" href="../styles/common-stylesheet-formelements.css"> <!-- common stylesheet for form and error message styling -->
+        <link rel="stylesheet" href="../styles/carrers-stylesheet.css"> <!-- stylesheet for carreres page  -->
+        <!-- linking css fonts --> 
         <link href="http://fonts.cdnfonts.com/css/century-gothic-paneuropean" rel="stylesheet">                
         <title>Technovert</title>
     </head>
@@ -15,7 +17,7 @@
     <body>
         <!-- using container as the primary element or block of the page -->
         <div class="container">
-        <!--Header of the page of the headlining and navigation bar -->
+            <!--Header and navigation bar -->
             <header>
                 <div class="page_title">TECHNOVERT</div>
                 <!--Navigation section of the page -->   
@@ -30,43 +32,46 @@
             </header>
 
             <!--Content of the page -->
-            <div id="applicationContainer">
+            <div id="bodyContainer">
                 <div class="page-details">
                     <h2 class="page-heading">Careers at Technovert</h2>
                     <p>We are looking for smart people love finding the code and pour their heart into it.If you are one, 
                     We would love to talk to you, Please fill the form bellow we will get back to you.</p>
                 </div>
                 
-                <form id="jobApplication" class="page-form"action="javascript:void(0);" onSubmit="validateForm(this)" method="get">
-                        <div class="data-field name-field imp-field">
-                            <label class="data-label" for="name" >Name</label>
+                <form id="formApplication" action="javascript:void(0);" method="get">
+                        <div class="data-field name-field">
+                            <label class="data-label" for="name" >Name <span class="mandatory-sign">*</span> </label>
                             <input class="data-input" type="text" id="name" name="name">
+                            <span class="user-err-msg"></span>
                         </div>
 
-                        <div class="data-field email-field imp-field">
-                            <label class="data-label" for="emailId" >Email</label>
+                        <div class="data-field email-field">
+                            <label class="data-label" for="emailId" >Email <span class="mandatory-sign">*</span> </label>
                             <input class="data-input" type="email" id="emailId" name="emailId">
+                            <span class="user-err-msg"></span>
                         </div>
 
-                        <div class="data-field role-field imp-field">
-                            <label class="data-label" for="desiredRole" >Desired role</label>
+                        <div class="data-field role-field name-field ">
+                            <label class="data-label" for="desiredRole" >Desired role <span class="mandatory-sign">*</span> </label>
                             <input class="data-input" type="text" id="desiredRole" name="desiredRole">
+                            <span class="user-err-msg"></span>
                         </div>
 
                         <div class="data-field resume-field">
-                            <label class="data-label" for="resume" >Upload Resume</label>
+                            <label class="data-label" for="resume" >Upload Resume <span class="mandatory-sign">*</span> </label>
                             <input class="data-input" type="file" id="resume" name="resume" accept=".pdf, .docx">
                             <label for="resume" class="submit-button">Browse..</label>
+                            <span class="user-err-msg"></span>
                         </div>
 
-                        <button type="submit" value="submit" form="jobApplication" class="submit-button submition">Submit</button>
+                        <button type="submit" value="submit" form="formApplication" class="submit-button submition">Submit</button>
+
                 </form>
-                <h2 id="succesfullSubmittion">Congragualtions your Application has been recived Mr/Ms <span></span></h2>
-                <h2 id="unSuccesfullSubmittion">Please fill the form properly </h2>
-                
+
             </div>
         </div>
 
-    <script src="../scripts/script.js"></script>
+    <script src="../scripts/carrersPageScript.js" type="module" ></script>
     </body>
 </html>

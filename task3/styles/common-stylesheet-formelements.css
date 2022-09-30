@@ -1,0 +1,24 @@
+/* common styling in both pages for form alignment */
+#bodyContainer{
+    padding: 25px 60px;
+    width: 75%;
+    font-family: 'Cabin', sans-serif;
+}
+
+#formApplication{
+    margin-top: 35px;
+    padding-left: 40px;    
+}
+
+.data-field{
+    margin-bottom: 20px;
+}
+
+.mandatory-sign, .user-err-msg{
+    margin-left: 10px;
+    color:red;
+}
+
+#succesfullSubmittion,#unSuccesfullSubmittion{
+    display:  none;
+}

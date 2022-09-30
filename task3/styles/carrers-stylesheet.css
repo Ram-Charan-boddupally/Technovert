@@ -2,25 +2,7 @@
     font-family: 'Century Gothic Paneuropean', sans-serif;
     font-weight: 500;
     font-size: 200%;
-}
-
-/* styling the border and adjusting the content in box */
-#applicationContainer{
-    padding: 25px 60px;
-    width: 75%;
-}
-
-#jobApplication{
-    margin-top:50px;
-    padding-left: 20px;
-}
-
-.page-heading{
     margin-top: 0px;
-    margin-bottom: 20px;
-}
-
-.data-field{
     margin-bottom: 20px;
 }
 
@@ -31,14 +13,20 @@
 }
 
 .data-input{
-    width:150px;
+    width: 180px;
     height: 30px;
 }
-
+ 
+/* styling the file upload button */
 #resume{
-    text-indent: -90px;
-    height: 30px;
-    border: 1px solid gray;
+    padding: 5px 10px;
+    height: max-content;
+    border: 1.5px solid gray;
+    border-radius: 2px;
+} 
+
+input[type="file"]::-webkit-file-upload-button {
+    display: none;
 }
 
 .submit-button{
@@ -50,15 +38,6 @@
     font-weight: bolder;
 }
 
-.user-msg{
-    margin-left:10px;
-    color:red;
-}
-
 .submition{
     margin-left:185px;
-}
-
-#succesfullSubmittion,#unSuccesfullSubmittion{
-    display:  none;
 }
