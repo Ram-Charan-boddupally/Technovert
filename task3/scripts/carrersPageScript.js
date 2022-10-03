@@ -30,6 +30,7 @@ function onSubmitForm(){
 
         const formdata = new FormData(document.querySelector("#formApplication"));
         let data = {};
+        let error = false;
         // appending data to the object
         for (const pair of formdata.entries()) {
             data[pair[0]] = pair[1];
@@ -41,15 +42,25 @@ function onSubmitForm(){
 
         if(carrerObject.isNamEmpty){
             document.querySelector(".name-field .user-err-msg").innerText = "Name field can't be empty";
+            error = true;
         }
         if(carrerObject.isEmailEmpty){
             document.querySelector(".email-field .user-err-msg").innerText = "Email field can't be empty";
+            error = true;
         }
         if(carrerObject.role == ""){
             document.querySelector(".role-field .user-err-msg").innerText = "Role field can't be empty";
+            error = true;
         }
         if(!carrerObject.fileStatus){
             document.querySelector(".resume-field .user-err-msg").innerText = "Upload the file";
+            error = true;
+        }
+        
+        if(!error){
+            alert("SUCCESFULL SUBMISSION");
+        }else{
+            alert("UNSUCCESFULL SUBMISSION);
         }
     });
 }
