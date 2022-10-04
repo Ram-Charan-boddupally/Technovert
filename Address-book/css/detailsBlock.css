@@ -1,0 +1,45 @@
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.details-block{
+    position: absolute;
+    width: 600px;
+    margin: 50px;
+    border: 2px solid black;
+    padding: 10px;
+}
+
+.user-name,.options{
+    display: inline-block;
+}
+
+.options{
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    padding: 8px;
+}
+
+.edit-option{
+    margin-right: 50px;
+}
+
+.user-name{
+    margin: 0px;
+}
+
+.options img{
+    width: 15px;
+    height: 17px;
+}
+
+.contact-details p{
+    margin: 0px;
+}
+
+.address-1{
+    display: block;
+    margin-left: 65px;
+}

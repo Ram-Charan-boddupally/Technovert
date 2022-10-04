@@ -4,9 +4,14 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../../task1/styles/stylesheet.css">
+        <!-- stylesheets -->
+        <link rel="stylesheet" href="../../task1/styles/stylesheet.css">  <!-- stylesheet for header -->
+        <link rel="stylesheet" href="../css/stylesheet.css"> <!-- stylesheet for the page -->
+        <link rel="stylesheet" href="../css/contactForm.css"> <!-- stylesheet for form -->
         <title>Technovert</title>
         <link href="http://fonts.cdnfonts.com/css/century-gothic-paneuropean" rel="stylesheet">
+        <link rel="stylesheet" href="../fonts/Noto_Sans/NotoSans-Thin.ttf">
+        <link href="http://fonts.cdnfonts.com/css/oslo" rel="stylesheet">
     </head>
 
     <body>
@@ -24,50 +29,72 @@
             </header>
 
             <!--Content of the page -->
-            <div id="main-block">
+            <div id="mainBlock">
                 <div class="contacts-block">
-                    <h2>CONTACTS</h2>
+                    <h3>CONTACTS</h3>
                     <ul class="contacts-list">
-                        <li class="candit-name">
-                            <h2 class="candit-name">Chandramani Aroa</h2>
+                        <li class="candit-details">
+                            <p class="candit-name">Chandramani Aroa</p>
                             <p class="candit-email">chandramaniarora@Technovert.com</p>
-                            <p class="candit-contact"><span class="country-code-contact">+91</span>92929292922</p>
+                            <p class="candit-contact">+91 92929292922</p>
                         </li>
-                        <li class="candit-name">
-                            <h2 class="candit-name">Chandramani Aroa</h2>
-                            <p class="candit-email">chandramaniarora@Technovert.com</p>
-                            <p class="candit-contact"><span class="country-code-contact">+91</span>92929292922</p>
+
+                        <li class="candit-details">
+                            <p class="candit-name">Shashi Pagadala</p>
+                            <p class="candit-email">vijay@Technovert.com</p>
+                            <p class="candit-contact">+91 92929292922</p>
+                        </li>
+
+                        <li class="candit-details">
+                            <p class="candit-name">Shashi Pagadala</p>
+                            <p class="candit-email">vijay@Technovert.com</p>
+                            <p class="candit-contact">+91 92929292922</p>
+                        </li>
+
+                        <li class="candit-details">
+                            <p class="candit-name">Shashi Pagadala</p>
+                            <p class="candit-email">vijay@Technovert.com</p>
+                            <p class="candit-contact">+91 92929292922</p>
                         </li>
                     </ul>
                 </div>
-                <div class="contacts-form">
-                    <div id="contactform">
-                        <p class="tag-name">Name</p>
-                        <input type="text" name="" id="">
-
-                        <p class=tag-name>Email</p>
-                        <input type="email" name="" id="">
-
-                        <p class="tag-block">
-                            <p class="tag-name">Phone</p>
-                            <input type="tel" name="" id="">
-                            <p class="tag-name">Mobile</p>
-                            <input type="tel" name="" id="">
-                        </p>
-
-                        <p class="tag-name">Web site</p>
-                        <input type="url" name="" id="">
-
-                        <p class="tag-name">Address</p>
-                        <textarea cols="40" rows="5"></textarea>
-
-                        <div class="buttons-block">
-                            <button type="submit">Submit</button>
-                            <button type="submit">Reset</button>
-                        </div>
-                    </div>
-                </div>
                 
+                <div id="contactForm">
+                    <div class="input-block">
+                        <p class="tag-name">Name</p>
+                        <input type="text" name="" id="">    
+                    </div>
+        
+                    <div class="input-block">
+                        <p class=tag-name>Email</p>
+                        <input type="email" name="" id="">    
+                    </div>
+        
+                    <div class="input-block mobile-details ">
+                        <p class="tag-name">Mobile</p>
+                        <input type="tel" name="" id="mobileNumber">    
+                    </div>
+                    <div class="input-block landline-details">
+                        <p class="tag-name">Landline</p>
+                        <input type="tel" name="" id="">    
+                    </div>
+        
+                    <div class="input-block">
+                        <p class="tag-name">Web site</p>
+                        <input type="url" name="" id="">    
+                    </div>
+        
+                    <div class="input-block">
+                        <p class="tag-name">Address</p>
+                        <textarea cols="70" rows="7"></textarea>    
+                    </div>
+        
+                    <div class="buttons-block">
+                        <button type="reset" class="button">Reset</button>
+                        <button type="submit" class="button">Add</button>
+                    </div>
+            </div>
+        
             </div>
         </div>
     </body>

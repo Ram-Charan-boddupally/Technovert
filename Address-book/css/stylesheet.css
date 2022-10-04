@@ -1,0 +1,56 @@
+#mainBlock{
+    padding: 15px;
+    font-family: 'NotoSans-Thin';
+    width: 100%;
+}
+
+.contacts-block{
+    width: 28%;
+}
+
+.contacts-block h3{
+    font-weight: bolder;
+}
+
+
+.contacts-list{
+    list-style:none;
+    padding: 2px;
+}
+
+.contacts-list li{
+    border: 1px solid #bab9b9;
+    padding: 6px 15px;
+    height: max-height;
+}
+
+.contacts-list li:hover{
+    background-color: rgba(207,230,242);
+}
+
+.contacts-list p{
+    padding: 2px 0px;
+    margin: 0px;
+} 
+
+.candit-name{
+    font-size: 30px;
+    font-weight: lighter;
+    margin-bottom: 5px;
+}
+
+.candit-contact{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+iframe{
+    margin-left: 50px;
+    width: 775px;
+    height: 400px;
+    border: 2px solid black;
+    /* height: 400px; */
+}
+
+.contacts-block, #contactForm{
+    display: inline-block;
+}
