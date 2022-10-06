@@ -11,7 +11,6 @@ html,body{
     position: absolute;
     width: max-content;
     height: min-content;
-    border: 1px solid black;
     box-shadow: 5px 5px 30px #3f4040;
     margin-left: 50px;
     padding: 30px;
@@ -71,3 +70,9 @@ textarea{
     float:right;
 }
 
+
+/*  */
+#contactForm.form-block{
+    margin-top:50px;
+    margin-left: 275px;
+}

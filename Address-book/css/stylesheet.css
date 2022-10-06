@@ -20,7 +20,7 @@
 
 .contacts-list li{
     border: 1px solid #bab9b9;
-    padding: 6px 15px;
+    padding: 2px 15px 10px 15px;
     height: max-height;
 }
 
@@ -43,14 +43,7 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-iframe{
-    margin-left: 50px;
-    width: 775px;
-    height: 400px;
-    border: 2px solid black;
-    /* height: 400px; */
-}
-
 .contacts-block, #contactForm{
     display: inline-block;
 }
+
