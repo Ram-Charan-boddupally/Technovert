@@ -22,8 +22,8 @@
                 <div class="page_title">Address Book</div>
                 <!--Navigation section of the page -->   
                 <nav class="navigation">
-                    <a href="../../task1/index.html">HOME</a>
-                    <a href="#">+ADD</a>
+                    <a href="../html/home.html">HOME</a>
+                    <a href="../html/contactForm.html">+ADD</a>
                     <img id="blogIcon" src="../../task1/images/blog-icon.png" alt="blog-icon" width="25" height="25">
                 </nav>
             </header>
@@ -33,53 +33,52 @@
                 <div class="contacts-block">
                     <h3>CONTACTS</h3>
                     <ul class="contacts-list">
-                        <li class="candit-details">
+                        <!-- <li class="candit-details">
                             <p class="candit-name">Chandramani Aroa</p>
                             <p class="candit-email">chandramaniarora@Technovert.com</p>
                             <p class="candit-contact">+91 92929292922</p>
-                        </li>
+                        </li> -->
                     </ul>
                 </div>
                 
                 <div id="contactForm">
                     <div class="input-block">
                         <p class="tag-name">Name</p>
-                        <input type="text" name="" id="">    
+                        <input type="text" name="name" id="name">    
                     </div>
         
                     <div class="input-block">
                         <p class=tag-name>Email</p>
-                        <input type="email" name="" id="">    
+                        <input type="email" name="email" id="email">    
                     </div>
         
                     <div class="input-block mobile-details ">
                         <p class="tag-name">Mobile</p>
-                        <input type="tel" name="" id="mobileNumber">    
+                        <input type="tel" name="contactInformation" id="mobileNumber">    
                     </div>
                     <div class="input-block landline-details">
                         <p class="tag-name">Landline</p>
-                        <input type="tel" name="" id="">    
+                        <input type="tel" name="contactInformation" id="contactInformation">    
                     </div>
         
                     <div class="input-block">
                         <p class="tag-name">Web site</p>
-                        <input type="url" name="" id="">    
+                        <input type="url" name="website" id="website">    
                     </div>
         
                     <div class="input-block">
                         <p class="tag-name">Address</p>
-                        <textarea cols="70" rows="7"></textarea>    
+                        <textarea cols="70" rows="7" name="address" id="address"></textarea>    
                     </div>
         
                     <div class="buttons-block">
                         <button type="reset" class="button">Reset</button>
                         <button type="submit" class="button">Add</button>
                     </div>
-            </div>
-        
+                </div>
             </div>
         </div>
 
-        <script src="../js/models.js"></script>
+        <script type= "module" src="../js/home.js"></script>
     </body>
 </html>
