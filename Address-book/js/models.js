@@ -12,7 +12,7 @@ class Employee{
     editInformation(object){
         this.name = object.name != null ? object.name : this.name;
         this.email = object.email;
-        this.object.contactInformation = [object.contactInformation[0],object.contactInformation[1]];
+        this.contactInformation = [object.contactInformation[0],object.contactInformation[1]];
         this.website = object.webiste;
         this.address = object.address;
         this.employeeStatus = object.status ; // exits or show in page
@@ -29,18 +29,15 @@ class EmployeeList{
         // if employee list is not null append details
         if(employeeDetailsList){
             for(const emp of employeeDetailsList){
-                emp.id = this.getListLength() != 0 ? this.employeeList.length+1 : 1;
+                if(!emp.id) emp.id = this.getListLength() != 0 ? this.employeeList.length+1 : 1;
                 let empObj = new Employee(emp);
                 this.employeeList.push(empObj);
             }
         }
-
-        console.log(this.employeeList);
     }
 
     addEmployee(employeeDetails){
         employeeDetails.id = this.getListLength() != 0 ? this.employeeList.length+1 : 1;
-        console.log("det",employeeDetails);
         let emp = new Employee(employeeDetails);
         this.employeeList.push(emp)
     }
@@ -51,12 +48,14 @@ class EmployeeList{
                 emp.editInformation(employeeDetails);
                 break; }
         }
+        
     }
 
     deleteEmployee(empId){
         for(const emp of this.employeeList){
             if(emp.id == empId){
                 emp.changeEmployeeStatus(false);
+                this.employeeList = this.employeeList.filter(emp=>emp.id != empId);
                 break;
             }
         }
