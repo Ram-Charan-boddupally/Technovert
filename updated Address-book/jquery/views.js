@@ -1,4 +1,4 @@
-import {reList,validateEmail,validateWebAddress,checkEmpty,isOnlyText} from '../../task3/scripts/utlis.js';
+import {reList,validateEmail,validateWebAddress,checkEmpty,isOnlyText, addErrorTag} from '../../task3/scripts/utlis.js';
 
 // views
 class FormView{
@@ -22,19 +22,22 @@ class FormView{
         // cheking is the fields are empty
         let status = true;
         $("input").each(function(){
-            if(checkEmpty(this.value)){
-                this.parentNode.innerHTML += "<span class='error'>FIELD IS REQUIRED</span>";
+            if(this.id != 'contactInformation' && checkEmpty(this.value)){
+                let ele = document.createElement("p");
+                ele.classList.add("error");
+                ele.innerText = "FIELD IS REQUIRED";
+                this.parentNode.appendChild(ele);
                 status = false;
-            }
-        });
+                };
+            });
 
         if(!status) return false;
 
         // checking the field validation
-        if(!isOnlyText(this.details.name)) $("#name").parent().append("<span class='error'>can't contain numbers</span>"),status=false;
-        if(!validateEmail(this.details.email)) $("#email").parent().append("<span class='error'>INVALID Email</span>"),status=false;
-        if(this.details.contactInformation[0].replaceAll(" ","").search(/(\+91)?[6-9][0-9]{9}/) == -1) $("#mobileNumber").parent().append("<span class='error'>INVALID Number</span>"),status=false;
-        if(!validateWebAddress(this.details.website)) $("#website").parent().append("<span class='error'>INVALID Address</span>"),status=false;
+        if(!isOnlyText(this.details.name)) $("#name").parent().append("<span class='error'>can't contain numbers</span>"), status=false;
+        if(!validateEmail(this.details.email)) $("#email").parent().append("<span class='error'>INVALID Email</span>"), status=false;
+        if(this.details.contactInformation[0].replaceAll(" ","").search(/(\+91)?[6-9][0-9]{9}/) == -1) $("#mobileNumber").parent().append("<span class='error'>INVALID Number</span>"), status=false;
+        if(!validateWebAddress(this.details.website)) $("#website").parent().append("<span class='error'>INVALID Address</span>"), status=false;
 
         return status;
     }
@@ -67,7 +70,7 @@ class FormView{
     
     bindResetForm(){
         $("button[type='reset']").click(function(){
-            $('.input-block span').remove();
+            $('.input-block p.error').remove();
             $('.input-block input').val("");
             $('.input-block textarea').text("");
         });

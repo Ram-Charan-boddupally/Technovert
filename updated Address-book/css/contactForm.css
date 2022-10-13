@@ -12,7 +12,8 @@ html,body{
     width: max-content;
     height: min-content;
     box-shadow: 5px 5px 30px #3f4040;
-    margin-left: 50px;
+    margin-top: 25px;
+    margin-left: 70px;
     padding: 30px;
 }
 
@@ -33,11 +34,11 @@ html,body{
 .input-block input{
     height: 35px;
     width: 550px;
-    margin-right: 140px;
+    margin-right: 75px;
 }
 
 #mobileNumber{
-    margin-right: 40px;
+    margin-right: 48px;
 }
 
 .mobile-details input,.landline-details input{
@@ -78,7 +79,8 @@ textarea{
 }
 
 .error{
-    margin-left: -100px;
     color: red;
     font-style: italic;
+    margin-top: 0px;
+    font-size: 85%;
 }

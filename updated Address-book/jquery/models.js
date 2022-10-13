@@ -23,20 +23,24 @@ class EmployeeList{
         // if employee list is not null append details
         if(employeeDetailsList){
             for(const emp of employeeDetailsList){
-                if(!emp.id){
-                    emp.id = 'emp';
-                    emp.id += this.getListLength() != 0 ? this.employeeList.length+1 : 1;  
-                } 
+                if(!emp.id) emp.id = this.getEmpId(emp.id);
                 let empObj = new Employee(emp);
                 this.employeeList.push(empObj);
             }
         }
     }
 
-    
+    getEmpId(empId){
+        empId = 'emp';
+        if(this.getListLength() > 0) empId += parseInt(this.employeeList[this.getListLength()-1].id.split("emp")[1])+1;
+        else empId += 0;
+
+        return empId;
+    }
+
     addEmployee(employeeDetails){
-        employeeDetails.id = 'emp';
-        employeeDetails.id += this.getListLength() != 0 ? this.employeeList.length+1 : 1;
+        employeeDetails.id = this.getEmpId(employeeDetails.id);
+
         let emp = new Employee(employeeDetails);
         this.employeeList.push(emp)
     }
@@ -70,6 +74,5 @@ class EmployeeList{
         return obj;
     }
 }
-
 
 export {Employee,EmployeeList};
