@@ -1,3 +1,4 @@
+/* styles for contact form */
 html,body{
     margin: 0px;
     padding: 0px;
@@ -21,20 +22,21 @@ html,body{
     margin-bottom:12px;
 }
 
+/* inpu tag labels */
 .tag-name{
     margin: 0px;
     font-weight: bolder;
     margin-bottom:3px;
 }
 
-.mobile-details,.landline-details{
-    display: inline-block;
-}
-
 .input-block input{
     height: 35px;
     width: 550px;
     margin-right: 75px;
+}
+
+.contact-details{
+    display: flex;
 }
 
 #mobileNumber{
@@ -73,7 +75,7 @@ textarea{
 }
 
 
-/*  */
+/* aligining form and contact details */
 .contact-form,.contacts-block{
     display: inline-block;
 }

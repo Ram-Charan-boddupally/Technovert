@@ -93,11 +93,10 @@ class ContactsListView{
         // creating p tags for employee information and list for empoloyee details
         let listElement = $("<li></li>").attr({ "id":object.id, "class": "candit-details"})
                                         .append(
-                                            $("<p></p>").addClass("candit-name").text(object['name']),
-                                            $("<p></p>").addClass("candit-email").text(object['email']),
-                                            $("<p></p>").addClass("candit-contact").text(object['contactInformation'][0]))
+                                            $("<p class='candit-name'></p>").text(object['name']),
+                                            $("<p class='candit-email'></p>").text(object['email']),
+                                            $("<p class='candit-contact'></p>").text(object['contactInformation'][0]))
                                         .click(function(){
-                                            // let empId = $(this).prop("tagName") == 'P' ? $(this).parent().attr("id") : $(this).attr("id");
                                             location.href = '../html/detailsPage.html?'+'employee='+$(this).attr("id");
                                         });
 
@@ -128,6 +127,7 @@ class DetailsView{
         let employee = this.model.getEmployee(empId);
 
         if(employee){
+
             $(".user-name").text(employee.name);
             $(".email-address span").text(employee.email);
             $(".mobile-number span").text(employee.contactInformation[0]);

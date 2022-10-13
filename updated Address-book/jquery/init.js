@@ -20,13 +20,13 @@ $(document).ready(function(){
     // inittialising the model data 
     if(sessionStorage.length > 1){
         model = EmployeeList.fromJSON(JSON.parse(sessionStorage.getItem("employeeList")));
-        console.log("session",model);
+        // console.log("session",model);
     }else{
         model = new EmployeeList(employeeData);
         sessionStorage.setItem("employeeList",JSON.stringify(model));
     }
 
-    console.log("data",model);
+    // console.log("data",model);
     // URL Navigation using the switch case
     let contactsList, detailsBlock, contactForm;
     switch(true){

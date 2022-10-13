@@ -1,3 +1,4 @@
+/* edit and del option in details block */
 .options a{
     text-decoration: none;
     color: black;
@@ -11,15 +12,16 @@
     padding: 10px;
 }
 
-.user-name,.options{
-    display: inline-block;
-}
-
 .options{
     position: absolute;
     top: 15px;
     right: 20px;
     padding: 8px;
+}
+
+.options img{
+    width: 15px;
+    height: 17px;
 }
 
 .edit-option{
@@ -30,18 +32,12 @@
     margin: 0px;
 }
 
-.options img{
-    width: 15px;
-    height: 17px;
+.user-name,.options{
+    display: inline-block;
 }
 
 .contact-details p{
     margin: 0px;
-}
-
-.address-1{
-    display: block;
-    margin-left: 65px;
 }
 
 .contacts-block,.details-block{
