@@ -48,6 +48,10 @@ textarea{
     resize: none;
 }
 
+.buttons-block{
+    float: right;
+}
+
 .button{
     padding: 10px 35px;
     border-radius: 0px;
@@ -61,18 +65,20 @@ textarea{
 
 .button[type='reset']{
     background-color: #8d0201;
-    margin-right: 10px;
-    float:right;
 }
 
 .button[type='submit']{
     background-color: #468d01;
-    float:right;
 }
 
 
 /*  */
-#contactForm.form-block{
-    margin-top:50px;
-    margin-left: 275px;
+.contact-form,.contacts-block{
+    display: inline-block;
+}
+
+.error{
+    margin-left: -100px;
+    color: red;
+    font-style: italic;
 }
