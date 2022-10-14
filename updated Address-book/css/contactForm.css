@@ -44,7 +44,7 @@ html,body{
 }
 
 .mobile-details input,.landline-details input{
-    width: 250px;
+    width: 251px;
 }
 
 textarea{
@@ -63,11 +63,14 @@ textarea{
 }
 
 .button:hover{
-    filter: brightness(70%)
+    filter: brightness(70%);
+    cursor: pointer;
+
 }
 
 .button[type='reset']{
     background-color: #8d0201;
+    
 }
 
 .button[type='submit']{

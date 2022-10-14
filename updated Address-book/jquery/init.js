@@ -5,12 +5,12 @@ import {FormView,ContactsListView,DetailsView} from '../jquery/views.js';
 let employeeData =  [{name:'Praveen Battula', email: 'praveen@technovert.com', contactInformation: ['+91 923 345 2342','040 30 1231211'], website: 'http://www.technovert.com', address: '123 now here \n some street,\n madhapur Hyderabad 500033'},
         {name:'Chandermani Arora', email: 'chandermani@technovert.com', contactInformation: ['+91 9292929292','040 30 1231211'], website: 'http://www.technovert.com', address: '123 now here \n some street,\n madhapur Hyderabad 500033'},
         {name:'Shashi Pagadala', email: 'vijay@technovert.com', contactInformation: ['+91 9292929292','040 30 1231211'], website: 'http://www.technovert.com', address: '123 now here \n some street,\n madhapur Hyderabad 500033'},
-        {name:'Vijay Yalamanchili', email: 'vijay@technovert.com', contactInformation: ['+91 9292929292','040 30 1231211'], website: 'http://www.technovert.com', address: '123 now here \n some street,\n madhapur Hyderabad 500033'},
+        {name:'Vijay Yalamanchili', email: 'vijay@technovert.com', contactInformation: ['+91 9292929292'], website: 'http://www.technovert.com', address: '123 now here \n some street,\n madhapur Hyderabad 500033'},
         {name:'Bhargavi', email: 'bhargavi@technovert.com', contactInformation: ['+91 9292929292','040 30 1231211'], website: 'http://www.technovert.com', address: '123 now here \n some street,\n madhapur Hyderabad 500033'},
         {name:'Ram', email: 'ram@technovert.com', contactInformation: ['+91 9292929292','040 30 1231211'], website: 'http://www.technovert.com', address: '123 now here \n some street,\n madhapur Hyderabad 500033'},
         {name:'charan', email: 'charan@technovert.com', contactInformation: ['+91 9292929292','040 30 1231211'], website: 'http://www.technovert.com', address: '123 now here \n some street,\n madhapur Hyderabad 500033'},
         {name:'Vijay', email: 'vijay@technovert.com', contactInformation: ['+91 9292929292','040 30 1231211'], website: 'http://www.technovert.com', address: '123 now here \n some street,\n madhapur Hyderabad 500033'},
-        {name:'deepak', email: 'deepak@technovert.com', contactInformation: ['+91 9292929292','040 30 1231211'], website: 'http://www.technovert.com', address: '123 now here \n some street,\n madhapur Hyderabad 500033'}
+        {name:'deepak', email: 'deepak@technovert.com', contactInformation: ['+91 9292929292','040 30 1231211'], website: 'http://www.technovert.com', address: ''}
     ]
 
 $(document).ready(function(){
@@ -26,7 +26,6 @@ $(document).ready(function(){
         sessionStorage.setItem("employeeList",JSON.stringify(model));
     }
 
-    // console.log("data",model);
     // URL Navigation using the switch case
     let contactsList, detailsBlock, contactForm;
     switch(true){

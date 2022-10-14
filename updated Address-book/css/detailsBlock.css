@@ -10,6 +10,11 @@
     margin: 50px;
     margin-left: 75px;
     padding: 10px;
+    font-weight: bolder;
+}
+
+.details-block p span{
+    font-weight: normal;
 }
 
 .options{
@@ -17,17 +22,22 @@
     top: 15px;
     right: 20px;
     padding: 8px;
+    cursor: pointer;
 }
 
 .options img{
     width: 15px;
-    height: 17px;
+    height: 18px;
+    margin-right: 2px;
 }
 
 .edit-option{
-    margin-right: 50px;
+    margin-right: 30px;
 }
 
+.delete-option img{
+    /* padding-top: 12px; */
+}
 .user-name{
     margin: 0px;
 }

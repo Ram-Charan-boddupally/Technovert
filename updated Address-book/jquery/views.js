@@ -1,10 +1,11 @@
-import {reList,validateEmail,validateWebAddress,checkEmpty,isOnlyText, addErrorTag} from '../../task3/scripts/utlis.js';
+import * as utils from '../jquery/validation.js';
 
 // views
 class FormView{
     constructor(model){
         this.model = model;
         this.details = {};
+        this.bindValidationListners();
     }
 
     fillForm(employee){
@@ -18,30 +19,62 @@ class FormView{
     }
 
     formValidation(){
-        $('.input-block span').remove();
-        // cheking is the fields are empty
-        let status = true;
-        $("input").each(function(){
-            if(this.id != 'contactInformation' && checkEmpty(this.value)){
-                let ele = document.createElement("p");
-                ele.classList.add("error");
-                ele.innerText = "FIELD IS REQUIRED";
-                this.parentNode.appendChild(ele);
-                status = false;
-                };
-            });
+        // $('.input-block p.error').remove();
+        // // cheking is the fields are empty
+        // let status = true;
+        // $("input").each(function(){
+        //     if(this.id != 'contactInformation' && utils.isFieldEmpty(this.value)){
+        //         let ele = document.createElement("p");
+        //         ele.classList.add("error");
+        //         ele.innerText = this.id + "  Is Required";  
+        //         this.parentNode.appendChild(ele);
+        //         status = false;
+        //         };
+        //     });
 
-        if(!status) return false;
 
-        // checking the field validation
-        if(!isOnlyText(this.details.name)) $("#name").parent().append("<span class='error'>can't contain numbers</span>"), status=false;
-        if(!validateEmail(this.details.email)) $("#email").parent().append("<span class='error'>INVALID Email</span>"), status=false;
-        if(this.details.contactInformation[0].replaceAll(" ","").search(/(\+91)?[6-9][0-9]{9}/) == -1) $("#mobileNumber").parent().append("<span class='error'>INVALID Number</span>"), status=false;
-        if(!validateWebAddress(this.details.website)) $("#website").parent().append("<span class='error'>INVALID Address</span>"), status=false;
-
-        return status;
+        // return status;
     }
     
+    bindValidationListners(){
+        let status = true;
+
+        $("input").change(function(){
+            status = true;
+            $("input").each(function(){
+                if(this.id != 'contactInformation' && this.value == ""){
+                    status = false;
+                    $("#"+this.id).parent().append($("<p class='error'></p>").text(this.id+" can't be empty"));
+                    return status;
+                }
+            })
+
+            if(status){
+                $(".button[type='submit']").css({"cursor":"pointer","opacity":"1"}).prop("disabled",false);
+            }else{
+                $(".button[type='submit']").css({"cursor":"not-allowed", "opacity": "0.5"}).prop("disabled",true);
+            }
+
+        })
+
+        $('#name').on('input', function(){
+            utils.displayErrorMsg("#name",utils.isOnlyText);
+        });
+
+        $("#email").on('input', function(){
+            utils.displayErrorMsg("#email",utils.validateEmail);
+        });
+ 
+        $("#mobileNumber").on('input', function(){
+            utils.displayErrorMsg("#mobileNumber",utils.mobileValidation);
+        });
+
+        $("#website").on('input',function(){
+            utils.displayErrorMsg("#website",utils.validateWebAddress);
+        });
+
+    }
+
     bindSubmitForm(handler,edit,empId){
         let obj = this;
         $("button[type='submit']").click(function(){
@@ -50,21 +83,19 @@ class FormView{
             obj.details.name = $("#name").val();
             obj.details.email = $("#email").val();
             obj.details.contactInformation.push($("#mobileNumber").val());
-            obj.details.contactInformation.push($("#contactInformation").val());
+            obj.details.contactInformation.push($("#contactInformation").val() == "" ? 'NA' : $("#contactInformation").val());
             obj.details.website = $("#website").val();
             obj.details.address = $("#address").val().replace("\n", "<br>");
 
-            if(obj.formValidation()){
-                if(edit) obj.model.editEmployee(empId,obj.details);
-                else obj.model.addEmployee(obj.details);
+            if(edit) obj.model.editEmployee(empId,obj.details);
+            else obj.model.addEmployee(obj.details);
 
-                handler.displayContacts(obj.model.employeeList);
+            handler.displayContacts(obj.model.employeeList);
 
-                obj.bindResetForm();
-                sessionStorage.setItem("employeeList",JSON.stringify(obj.model));
-                alert("contact Succesfully submited");
-                location.href = '../html/home.html';
-            }
+            obj.bindResetForm();
+            sessionStorage.setItem("employeeList",JSON.stringify(obj.model));
+            alert("contact Succesfully submited");
+            location.href = '../html/home.html';
         })
     }
     
@@ -125,7 +156,7 @@ class DetailsView{
 
         $(".details-block").attr("id",empId);
         let employee = this.model.getEmployee(empId);
-
+        console.log(employee)
         if(employee){
 
             $(".user-name").text(employee.name);

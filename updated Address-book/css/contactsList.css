@@ -20,7 +20,8 @@
 .contacts-list li{
     border: 1px solid #bab9b9;
     padding: 2px 15px 10px 15px;
-    height: max-height;
+    height: max-content;
+    cursor: pointer;
 }
 
 .contacts-list li:hover{

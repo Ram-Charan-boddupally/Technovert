@@ -1,11 +1,13 @@
 class Employee{
     constructor(object){
+
         this.id = object.id;
         this.name = object.name != null ? object.name : "";
         this.email = object.email != null ? object.email : "";
         this.contactInformation = object.contactInformation != null ? object.contactInformation : [];
         this.website = object.website != null ? object.website : "";
-        this.address = object.address != null ? object.address : "";
+        this.address = object.address != "" ? object.address : "NA";
+        this.contactInformation[1] = object.contactInformation[1] == null ? 'NA' : object.contactInformation[1];
     }
 
     editInformation(object){
