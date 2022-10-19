@@ -23,21 +23,21 @@
     right: 20px;
     padding: 8px;
     cursor: pointer;
+    height: 18px;
+    font-size: 120%;
 }
 
 .options img{
     width: 15px;
-    height: 18px;
     margin-right: 2px;
+    transform: scale(1,0.80);
+    margin-bottom: -2px;
 }
 
 .edit-option{
     margin-right: 30px;
 }
 
-.delete-option img{
-    /* padding-top: 12px; */
-}
 .user-name{
     margin: 0px;
 }

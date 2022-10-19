@@ -46,3 +46,7 @@
 .contacts-block, #contactForm{
     display: inline-block;
 }
+
+.selected{
+    background-color: rgba(207,230,242,0.5);
+}

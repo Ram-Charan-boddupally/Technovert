@@ -6,16 +6,18 @@ class Employee{
         this.email = object.email != null ? object.email : "";
         this.contactInformation = object.contactInformation != null ? object.contactInformation : [];
         this.website = object.website != null ? object.website : "";
-        this.address = object.address != "" ? object.address : "NA";
-        this.contactInformation[1] = object.contactInformation[1] == null ? 'NA' : object.contactInformation[1];
+        this.address = object.address != null ? object.address : "";
+        this.contactInformation[1] = object.contactInformation[1] != null ? object.contactInformation[1] : "";
     }
 
     editInformation(object){
         this.name = object.name != null ? object.name : this.name;
-        this.email = object.email;
-        this.contactInformation = [object.contactInformation[0],object.contactInformation[1]];
-        this.website = object.webiste;
-        this.address = object.address;
+        this.email = object.email != null ? object.email : this.email;
+        this.contactInformation[0] = object.contactInformation[0] != null ? object.contactInformation[0] : this.contactInformation[0];
+        this.contactInformation[1] = object.contactInformation[1] != null ? object.contactInformation[1] : this.contactInformation[0];
+
+        this.website = object.webiste != null ? object.webiste : this.website;
+        this.address = object.address != null ? object.address : this.address;
     }
 }
 
@@ -48,6 +50,7 @@ class EmployeeList{
     }
 
     editEmployee(id,employeeDetails){
+        console.log(this.employeeList)
         for(const emp of this.employeeList){
             if(emp.id == id){
                 emp.editInformation(employeeDetails);

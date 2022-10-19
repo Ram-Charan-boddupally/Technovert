@@ -47,21 +47,25 @@ html,body {
 }
 
 /* setting margin or spacing between elements in naviagation bar */
-.navigation .active, .navigation a:hover{
+.navigation .active{
     color:rgb(51,51,51);
     background-color:rgb(255,153,0);
     border-left: 5px solid white;
     font-weight: bolder;
 }
-
+.navigation .active:hover{
+    padding: 12px 20px;
+}
 .navigation a:hover{
+    background-color:rgb(255,153,0);
     color:white;
+    padding: 15px 20px 14px;
 }
 
 .navigation a{
     padding: 12px 20px;
     text-align: center;
-    margin-left: -5px;
+    margin-left: -8px;
 }
 
 #blogIcon {
