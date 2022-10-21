@@ -44,23 +44,29 @@ class FormView{
                     break
             }
             obj.fieldValidationStatus = gblStatus.every(bool => bool === true);
-            console.log(obj.fieldValidationStatus,gblStatus)
+            // console.log(obj.fieldValidationStatus,gblStatus)
         });
     }
 
     checkEmptyField(){
+        let field;
         $('input').each(function(){
             if(this.id != 'contactInformation' && this.value == ""){
+                if(!field) field = this;
                 if($(this).next().length == 0)
                     $(this).parent().append($("<p class='error'></p>").text(this.id+" can't be empty"))
                 $(this).focus()
-                alert('Please fill Empty Fields');
-                return false;
             }else if(this.id != 'contactInformation' && this.value != ""){
                 if($(this).next().length > 0)
                     $(this).next().remove();
             }
         });
+
+        if(field){
+            console.log(field.focus())
+            return false;
+        }
+
         return true;
     }
 
@@ -68,7 +74,18 @@ class FormView{
         let obj = this;
         $("button[type='submit']").click(function(){
             obj.details.contactInformation = [];
-            if(obj.checkEmptyField() & obj.fieldValidationStatus){
+
+            if(edit){
+                let status = [true,true,true,true];
+                status[0] = displayErrorMsg("#name", /^[a-zA-Z ]+$/);;
+                status[1] = displayErrorMsg("#email",/^[a-zA-Z]+([a-zA-Z0-9]|[_\.-])+@[a-zA-Z0-9_-]+(\.[a-zA-Z]+)+/); 
+                status[2] = displayErrorMsg("#mobileNumber", /^(91)[6-9][0-9]{9}$/);
+                status[3] = displayErrorMsg("#website", /^(https|http):\/\/[a-zA-Z]+([a-zA-Z0-9]|[.:_\/\-%])+/);
+            
+                obj.fieldValidationStatus = status.every(field => field == true);
+            }
+            let isFieldEmpty = obj.checkEmptyField();
+            if( isFieldEmpty == true & obj.fieldValidationStatus){
                 obj.details.name = $("#name").val();
                 obj.details.email = $("#email").val();
                 obj.details.contactInformation.push($("#mobileNumber").val());
@@ -85,13 +102,28 @@ class FormView{
                 sessionStorage.setItem("employeeList",JSON.stringify(obj.model));
                 alert("contact Succesfully submited");
                 location.href = '../html/home.html';
-            }else if(obj.fieldValidationStatus == false){
+            }else if(isFieldEmpty == true && obj.fieldValidationStatus == false){
                 alert("invalid input")
-                displayErrorMsg("#name", /^[a-zA-Z ]+$/);;
-                displayErrorMsg("#email",/^[a-zA-Z]+([a-zA-Z0-9]|[_\.-])+@[a-zA-Z0-9_-]+(\.[a-zA-Z]+)+/); 
-                displayErrorMsg("#mobileNumber", /^(91)[6-9][0-9]{9}$/);
-                displayErrorMsg("#website", /^(https|http):\/\/[a-zA-Z]+([a-zA-Z0-9]|[.:_\/\-%])+/);
-            }
+                let field;
+                if(!displayErrorMsg("#name", /^[a-zA-Z ]+$/)){
+                    if(!field) field = $("#name").focus();
+                }
+                if(!displayErrorMsg("#email",/^[a-zA-Z]+([a-zA-Z0-9]|[_\.-])+@[a-zA-Z0-9_-]+(\.[a-zA-Z]+)+/)){
+                    if(!field) field = $("#email").focus();
+                }; 
+                if(!displayErrorMsg("#mobileNumber", /^(91)[6-9][0-9]{9}$/)){
+                    if(!field) field = $("#mobileNumber").focus();
+                };
+                if(!displayErrorMsg("#website", /^(https|http):\/\/[a-zA-Z]+([a-zA-Z0-9]|[.:_\/\-%])+/)){
+                    if(!field) field = $("#website").focus();
+                };
+
+                if(field){
+                    field.focus()
+                }
+            }else if(!isFieldEmpty){
+                alert("please fill the required fields");
+            } 
         })
     }
     
